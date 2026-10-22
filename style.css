@@ -1,0 +1,424 @@
+/* =========================
+   1. PENGATURAN DASAR
+   ========================= */
+:root {
+    --green: #174c3c;
+    --green-dark: #10372c;
+    --cream: #f7f5ee;
+    --white: #ffffff;
+    --text: #26332d;
+    --muted: #65736b;
+    --border: #dce4dd;
+    --gold: #e6b85c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--cream);
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+a {
+    color: var(--green);
+}
+
+/* =========================
+   2. HEADER DAN NAVIGASI
+   ========================= */
+.header {
+    padding: 42px 0;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--green-dark), var(--green));
+}
+
+.header h1 {
+    margin-bottom: 8px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.header p {
+    margin-bottom: 0;
+    color: #dce9e1;
+}
+
+.page-header {
+    padding: 34px 0;
+    color: var(--white);
+    background: var(--green);
+}
+
+.page-header h1 {
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    margin-bottom: 0;
+    color: #e0ebe5;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav a {
+    padding: 9px 13px;
+    border-radius: 7px;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--white);
+    background: var(--green);
+}
+
+/* =========================
+   3. BERANDA
+   ========================= */
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 30px;
+    padding: 42px 0 26px;
+}
+
+.hero h2 {
+    max-width: 600px;
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.hero p {
+    max-width: 590px;
+    color: var(--muted);
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+    color: #9a7427;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 17px;
+    border-radius: 8px;
+    color: var(--white);
+    background: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: var(--green-dark);
+}
+
+.image-placeholder,
+.card-image-placeholder,
+.media-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 220px;
+    padding: 20px;
+    border: 2px dashed #9fb6a8;
+    border-radius: 14px;
+    color: var(--green);
+    background: #e8eee8;
+    text-align: center;
+}
+
+.image-placeholder {
+    min-height: 300px;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(16, 55, 44, 0.16);
+}
+
+.card-image {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.audio-player {
+    margin: 28px 0 35px;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+}
+
+.audio-player audio {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+}
+
+.image-placeholder span {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.section {
+    padding: 30px 0 42px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+}
+
+.card-image-placeholder {
+    min-height: 150px;
+    border: 0;
+    border-radius: 0;
+}
+
+.card-body {
+    padding: 18px;
+}
+
+.card-body h3 {
+    margin-bottom: 8px;
+}
+
+.card-body p {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.media-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 35px;
+    padding: 25px;
+    border-radius: 14px;
+    background: #e9eee8;
+}
+
+.media-placeholder {
+    min-height: 180px;
+}
+
+.notice {
+    margin: 28px 0 40px;
+    padding: 25px;
+    border-left: 5px solid var(--gold);
+    border-radius: 8px;
+    background: var(--white);
+}
+
+/* =========================
+   4. HALAMAN ISI DAN TABEL
+   ========================= */
+.content {
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
+
+.content-panel {
+    margin-bottom: 22px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+}
+
+.content-panel li {
+    margin-bottom: 8px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    color: var(--white);
+    background: var(--green);
+}
+
+tbody tr:nth-child(even) {
+    background: #f0f4f0;
+}
+
+/* =========================
+   5. FRAME DAN IFRAME
+   ========================= */
+.frame-layout {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.frame-menu,
+.frame-content,
+.guide-frame {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+}
+
+.frame-menu {
+    min-height: 330px;
+}
+
+.frame-content {
+    min-height: 330px;
+}
+
+.guide-frame {
+    min-height: 320px;
+}
+
+.frame-page {
+    min-height: 100vh;
+    padding: 18px;
+    background: var(--white);
+}
+
+.frame-page h2 {
+    color: var(--green);
+}
+
+.frame-page a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: #eef3ee;
+    text-decoration: none;
+}
+
+.frame-page a:hover {
+    color: var(--white);
+    background: var(--green);
+}
+
+/* =========================
+   6. FOOTER DAN RESPONSIVE
+   ========================= */
+.footer {
+    padding: 20px 0;
+    color: #e2ebe5;
+    background: var(--green-dark);
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media (max-width: 720px) {
+    .hero,
+    .media-section {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .frame-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .frame-menu {
+        min-height: 210px;
+    }
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav a {
+        padding: 8px 9px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Ukuran video wisata */
+
+/* Paksa ukuran video menjadi lebih kecil */
+.media-section video.video-wisata {
+    width: 220px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+        object-fit: contain;
+    border-radius: 12px;
+}
